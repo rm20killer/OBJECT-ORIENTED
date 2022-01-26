@@ -3,6 +3,7 @@
 
 #include "simpleClass.h"
 #include "simpleMaths.h"
+#include "TimeOfDayclass.h"
 
 using namespace std;
 
@@ -11,6 +12,7 @@ int main()
 	SimpleClass simple1;
 	SimpleClass simple2;
 	SimpleMaths maths;
+	TimeOfDay TimeOfDay;
 	simple1.setInteger(10);
 	simple2.setInteger(-50);
 
@@ -20,4 +22,5 @@ int main()
 	printf("%i - %i = %i \n", simple1.getInterger(), simple2.getInterger(), maths.Takeaway(simple1.getInterger(), simple2.getInterger()));
 	printf("%i * %i = %i \n", simple1.getInterger(), simple2.getInterger(), maths.Multi(simple1.getInterger(), simple2.getInterger()));
 	printf("%i / %i = %f \n", simple1.getInterger(), simple2.getInterger(), maths.Divide(simple1.getInterger(), simple2.getInterger()));
+	cout << ctime(TimeOfDay.TimeOfday());
 }

@@ -22,10 +22,14 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\simpleClass.cpp" />
     <ClCompile Include="src\SimpleMaths.cpp" />
+    <ClCompile Include="src\TimeOfday.cpp" />
+    <ClCompile Include="src\TimeOfDayclass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\simpleClass.h" />
     <ClInclude Include="Include\SimpleMaths.h" />
+    <ClInclude Include="Include\TimeOfday.h" />
+    <ClInclude Include="Include\TimeOfDayclass.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

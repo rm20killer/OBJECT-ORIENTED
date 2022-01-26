@@ -24,12 +24,24 @@
     <ClCompile Include="src\SimpleMaths.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\TimeOfday.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TimeOfDayclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\simpleClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Include\SimpleMaths.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\TimeOfday.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\TimeOfDayclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
