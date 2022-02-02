@@ -3,7 +3,6 @@
 #include <iostream>
 #include <vector>
 
-
 using std::string;
 using std::vector;
 
@@ -19,9 +18,10 @@ public:
 
 	void setFirstName(string fristIn);
 	void setLastName(string LastIn);
+	void setBirthOfdate(int BirthOfDateIn);
 
 	string getFirstName();
 	string getLastName();
-	float getDateOfBirth();
+	int getDateOfBirth();
 	string getReadableDOB();
 };
