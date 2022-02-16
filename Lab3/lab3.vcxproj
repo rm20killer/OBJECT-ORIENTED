@@ -141,19 +141,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\UserInput.cpp" />
-    <ClCompile Include="src\Cat.cpp" />
-    <ClCompile Include="src\Dog.cpp" />
-    <ClCompile Include="src\leg.cpp" />
-    <ClCompile Include="src\quadruped.cpp" />
+    <ClCompile Include="src\quadruped\Hamster.cpp" />
+    <ClCompile Include="src\Menu.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\GamePlay.cpp" />
+    <ClCompile Include="src\quadruped\Cat.cpp" />
+    <ClCompile Include="src\quadruped\Dog.cpp" />
+    <ClCompile Include="src\leg.cpp" />
+    <ClCompile Include="src\quadruped\quadruped.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Inlude\Cat.h" />
-    <ClInclude Include="Inlude\Dog.h" />
+    <ClInclude Include="Inlude\Pets\Cat.h" />
+    <ClInclude Include="Inlude\Pets\Cats\Bengal.h" />
+    <ClInclude Include="Inlude\Pets\Cats\Sphynx.h" />
+    <ClInclude Include="Inlude\Pets\Dog.h" />
+    <ClInclude Include="Inlude\Pets\Hamster.h" />
     <ClInclude Include="Inlude\leg.h" />
+    <ClInclude Include="Inlude\Menu.h" />
     <ClInclude Include="Inlude\quadruped.h" />
-    <ClInclude Include="Inlude\UserInput.h" />
+    <ClInclude Include="Inlude\GamePlay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

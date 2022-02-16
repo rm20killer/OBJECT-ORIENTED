@@ -1,7 +1,9 @@
 #include "leg.h"
 
 #include <cstdio>
+#include <iostream>
 
+using namespace std;
 Leg::Leg()
 {
 	bRaised = false;
@@ -9,9 +11,7 @@ Leg::Leg()
 
 void Leg::raise()
 {
-
 	bRaised = true;
-	printf("raised there legs\n");
 }
 
 void Leg::lower()

@@ -15,22 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\quadruped.cpp">
+    <ClCompile Include="src\quadruped\quadruped.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\leg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Dog.cpp">
+    <ClCompile Include="src\quadruped\Dog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Cat.cpp">
+    <ClCompile Include="src\quadruped\Cat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\UserInput.cpp">
+    <ClCompile Include="src\GamePlay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\quadruped\Hamster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,13 +47,25 @@
     <ClInclude Include="Inlude\leg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inlude\Dog.h">
+    <ClInclude Include="Inlude\Pets\Dog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inlude\Cat.h">
+    <ClInclude Include="Inlude\Pets\Cat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inlude\UserInput.h">
+    <ClInclude Include="Inlude\GamePlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inlude\Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inlude\Pets\Hamster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inlude\Pets\Cats\Bengal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inlude\Pets\Cats\Sphynx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
