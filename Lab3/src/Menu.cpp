@@ -10,19 +10,19 @@ GamePlay Gameplay;
 int Menu::MainMenu()
 {
 	bInMainMenu = true;
-	while(bInMainMenu)
+	while (bInMainMenu)
 	{
 		int iInput;
 		printf("#= MENU =#\n");
 		printf("1) Play\n");
 		printf("9) exit\n");
 		cin >> iInput;
-		if(iInput == 9)
+		if (iInput == 9)
 		{
 			bInMainMenu = false;
 			return 0;
 		}
-		else if(iInput == 1){
+		else if (iInput == 1) {
 			//if user wasnt to play enter start up from userinput class
 			bInMainMenu = false;
 			Gameplay.startup();
@@ -49,6 +49,9 @@ void Menu::intract()
 		printf("#= interact with %s =#\n", Gameplay.getName().c_str());
 		printf("1) Raise leg\n");
 		printf("2) Lower leg\n");
+		if (Gameplay.getPetType() == 2) {
+			printf("3) jump");
+		}
 		printf("9) exit\n");
 		cin >> iInput;
 		if (iInput == 1 || iInput == 2)
@@ -69,6 +72,11 @@ void Menu::intract()
 				Gameplay.LowerLeg(iLeg);
 				system("pause");
 			}
+		}
+		else if(iInput==3&&Gameplay.getPetType()==2)
+		{
+			Gameplay.Jump();
+			system("pause");
 		}
 		else if (iInput == 9) {
 			bInmenu = false;

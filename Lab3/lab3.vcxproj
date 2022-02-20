@@ -141,6 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\quadruped\Cats\Bengal.cpp" />
     <ClCompile Include="src\quadruped\Hamster.cpp" />
     <ClCompile Include="src\Menu.cpp" />
     <ClCompile Include="main.cpp" />

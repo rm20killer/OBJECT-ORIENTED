@@ -6,6 +6,7 @@ class GamePlay
 {
 private:
 	int iPetType;
+	int iCatType;
 	string sPetName;
 public:
 	string asPets[3] = {"Dog","Cat","Hamster"};
@@ -13,4 +14,7 @@ public:
 	void startup();
 	void RaiseLeg(int leg);
 	void LowerLeg(int leg);
+	void Jump();
+	int getPetType();
+	int getCatType();
 };

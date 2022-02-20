@@ -5,5 +5,8 @@
 
 class Sphynx:public Cat
 {
+public:
+	float MaxJump = 5;
+private:
 
 };

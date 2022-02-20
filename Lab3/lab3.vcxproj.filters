@@ -39,6 +39,9 @@
     <ClCompile Include="src\quadruped\Hamster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\quadruped\Cats\Bengal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inlude\quadruped.h">

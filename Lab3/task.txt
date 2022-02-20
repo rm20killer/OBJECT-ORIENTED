@@ -1,0 +1,24 @@
+IMAT1908 Intro to Object Oriented Programming C++
+Lab 4 – Method Overloading and Inheritance.
+
+Objectives
+The objectives for this week are:
+• Understand the process of method overloading and its application.
+• implement both an extension of the quadruped example and incorporate an
+additional animal.
+
+Tasks
+
+Task 1
++ You will need to finish last week’s lab in order to progress into this week.
++ Make sure that you have followed the code from the lecture and commented were needed so that you understand the process.
++ With this code, add an additional animal to the cat and dog. You can choose.
++ Additionally, add a subclass of one of the animals so you understand this process also. You will need a header (placed in the include folder) and a source file (placed in the src folder).
++ The animal could perhaps be a breed of the animal or a type (Bull terrier / Small etc.).
+
+Task 2
+• To the additional subclass, add a method overload.
+• In your main, include the construction of the additional animal and use the overloaded methods.
++ With the method overloading use the inheritance in more broad way, show the inheritance between each class.
++ As there will be different class, there must be some inheritance between each class and implement it in your code.
++ Output should be meaningful and it should be working

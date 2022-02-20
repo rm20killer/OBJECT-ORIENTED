@@ -23,7 +23,7 @@ int main()
 	int iPlaying = menu.MainMenu();
 	//Gameplay.startup();
 
-	if (iPlaying == 1 ) {
+	if (iPlaying == 1) {
 		bPlaying = true;
 		menu.intract();
 	}
