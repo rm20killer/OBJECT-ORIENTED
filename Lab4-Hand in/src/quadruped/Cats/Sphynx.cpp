@@ -1,11 +1,11 @@
-#include <Pets/Cats/Bengal.h>
+#include <Pets/Cats/Sphynx.h>
 
-int Bengal::GetMaxJump()
+int Sphynx::GetMaxJump()
 {
     return iJumpHeight;
 }
 
-string Bengal::GetRandomResponse()
+string Sphynx::GetRandomResponse()
 {
     int iRandomNumber = (rand() % iNumOfResponse);
     string ReturnResponse = asResponse[iRandomNumber];

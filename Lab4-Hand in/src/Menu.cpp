@@ -51,7 +51,7 @@ void Menu::intract()
 		printf("2) Lower leg\n");
 		if (Gameplay.getPetType() == 1) {
 			printf("3) jump\n");
-			printf("4) check on %s", Gameplay.getName().c_str());
+			printf("4) check on %s \n", Gameplay.getName().c_str());
 		}
 		printf("9) exit\n");
 		cin >> iInput;

@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-GamePlay gameplay;
+GamePlay gamePlay;
 
 void Cat::talk()
 {
@@ -15,7 +15,7 @@ void Cat::talk()
 
 void Cat::jump(int iJump)
 {
-	if (gameplay.getCatType() == 1)
+	if (gamePlay.getCatType() == 1)
 	{
 		Bengal userPet;
 		iJumpHeight = userPet.GetMaxJump();
@@ -36,7 +36,7 @@ void Cat::jump(int iJump)
 
 void Cat::jump()
 {
-	if (gameplay.getCatType() == 1)
+	if (gamePlay.getCatType() == 1)
 	{
 		Bengal userPet;
 		iJumpHeight = userPet.GetMaxJump();
@@ -45,19 +45,19 @@ void Cat::jump()
 		Sphynx userPet;
 		iJumpHeight = userPet.GetMaxJump();
 	}
-	int iComputerChoice = (rand() % iJumpHeight-1) + 1;
+	int iComputerChoice = (rand() % iJumpHeight - 1) + 1;
 	printf("has jumped %im, ", iComputerChoice);
 }
 
 void Cat::WhatIsTheCatDoing()
 {
-	if (gameplay.getCatType() == 1)
+	if (gamePlay.getCatType() == 1)
 	{
 		Bengal userPet;
-		printf("%s %s", gameplay.getName().c_str(), userPet.GetRandomResponse().c_str());
+		printf(" %s %s", gamePlay.getName().c_str(), userPet.GetRandomResponse().c_str());
 	}
 	else {
 		Sphynx userPet;
-		printf("%s %s", gameplay.getName().c_str(), userPet.GetRandomResponse().c_str());
+		printf(" %s %s", gamePlay.getName().c_str(), userPet.GetRandomResponse().c_str());
 	}
 }
