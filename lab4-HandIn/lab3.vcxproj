@@ -142,11 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\quadruped\Cats\Sphynx.cpp" />
     <ClCompile Include="src\quadruped\Cats\Bengal.cpp" />
     <ClCompile Include="src\quadruped\Hamster.cpp" />
     <ClCompile Include="src\Menu.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="src\GamePlay.cpp" />
     <ClCompile Include="src\quadruped\Cat.cpp" />
     <ClCompile Include="src\quadruped\Dog.cpp" />

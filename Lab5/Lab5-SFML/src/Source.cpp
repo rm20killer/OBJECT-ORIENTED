@@ -7,8 +7,8 @@ using namespace std;
 float iRectangleX = 0;
 float iRectangleY = 0;
 
-int fSizex = 800;
-int fSizey = 600;
+int fSizex = 1920;
+int fSizey = 1080;
 
 int iRed = 0;
 int iBlue = 0;
@@ -112,6 +112,7 @@ int main()
 				iRectangleX = iRectangleX + 10;
 				myRectangle.setPosition(iRectangleX, iRectangleY);
 				iCounter++;
+				//printf("%i \n", iCounter);
 			}
 			else
 			{
@@ -123,7 +124,6 @@ int main()
 		sf::Time elapsedTime = Timer.getElapsedTime();
 		if (elapsedTime.asSeconds() > 1.0f)
 		{
-			printf("%i \n", iCounter);
 			//iCounter++;
 			//if (iCounter == 100)
 			//{

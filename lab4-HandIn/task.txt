@@ -17,8 +17,8 @@ Task 1
 + The animal could perhaps be a breed of the animal or a type (Bull terrier / Small etc.).
 
 Task 2
-• To the additional subclass, add a method overload.
-• In your main, include the construction of the additional animal and use the overloaded methods.
++ To the additional subclass, add a method overload.
++ In your main, include the construction of the additional animal and use the overloaded methods.
 + With the method overloading use the inheritance in more broad way, show the inheritance between each class.
 + As there will be different class, there must be some inheritance between each class and implement it in your code.
 + Output should be meaningful and it should be working

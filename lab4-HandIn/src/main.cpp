@@ -1,4 +1,6 @@
 // Name: Roshan Manojkumar, P2657789
+// A program that used class, method overloading and inheritance.
+// This program is a simple pet sim. Where the user can lower/raise the pets leg, if user select cat they can also make the pet jump (which uses method overloading) & check what the cat is doing.
 
 //#################################################################################################################//
 //                                                 Using C++ Core Guildlines                                       //
@@ -12,27 +14,23 @@
 #include "GamePlay.h"
 #include "Menu.h"
 using namespace std;
-
-
-//
-bool bPlaying;
 int main()
 {
+	printf("For method overloading and subclass is in the pet Cat (option 2 in pet selection menu) \n");
+	system("pause");
+	system("CLS");
 	GamePlay gameplay;
 	Menu menu;
 	int iPlaying = menu.MainMenu();
-	//Gameplay.startup();
-
-	if (iPlaying == 1) {
-		bPlaying = true;
+	//get the return value from the MainMenu function from the menu class
+	if (iPlaying == 1) 
+	{
 		menu.intract();
+		//enter the intract screen if playing is true
 	}
-	else {
-		bPlaying = false;
-	}
-	//while (playing) {
-	//}
-	if (bPlaying == false) {
+	else if (iPlaying == 0) 
+	{
+		//exit
 		system("pause");
 		return 0;
 	}

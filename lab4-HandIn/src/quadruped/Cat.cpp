@@ -2,20 +2,25 @@
 #include <Pets/Cats/Bengal.h>
 #include <Pets/Cats/Sphynx.h>
 #include <GamePlay.h>
-
+#include <menu.h>
 #include <iostream>
 
-GamePlay gamePlay;
+Menu menu;
 
 void Cat::talk()
 {
 	printf("meow");
 	//display "meow"
 }
-
+/// <jump function><param: Jump Hight>
+/// </summary>
+/// grabs cat type from gameplay class but uses the menu so the value is the same as the set up value.
+/// Grabs max hight from the child class than check if the max hight is lower or the same as the value user gave
+/// 
 void Cat::jump(int iJump)
 {
-	if (gamePlay.getCatType() == 1)
+	int iCatType = menu.getCatType();
+	if (iCatType == 1)
 	{
 		Bengal userPet;
 		iJumpHeight = userPet.GetMaxJump();
@@ -26,17 +31,21 @@ void Cat::jump(int iJump)
 	}
 	if (iJumpHeight >= iJump)
 	{
-		printf("has jumped %im\n", iJump);
+		printf("has jumped %i feet\n", iJump);
 	}
 	else
 	{
 		printf("could not jump that high\n");
 	}
 }
-
+/// <jump function>
+/// </summary>
+/// grabs cat type from gameplay class but uses the menu so the value is the same as the set up value.
+/// Grabs max hight from the child class and use that for the max number the random number gen can make
 void Cat::jump()
 {
-	if (gamePlay.getCatType() == 1)
+	int iCatType = menu.getCatType();
+	if (iCatType == 1)
 	{
 		Bengal userPet;
 		iJumpHeight = userPet.GetMaxJump();
@@ -45,19 +54,23 @@ void Cat::jump()
 		Sphynx userPet;
 		iJumpHeight = userPet.GetMaxJump();
 	}
-	int iComputerChoice = (rand() % iJumpHeight - 1) + 1;
-	printf("has jumped %im, ", iComputerChoice);
+	int iComputerChoice = (rand() % iJumpHeight - 1) + 1; // generates a random number
+	printf("has jumped %i feet, ", iComputerChoice);
 }
-
+/// <WhatIsTheCatDoing function>
+/// </summary>
+///	calls value from menu and child and display it.
+///
 void Cat::WhatIsTheCatDoing()
 {
-	if (gamePlay.getCatType() == 1)
+	int iCatType = menu.getCatType();
+	if (iCatType == 1)
 	{
 		Bengal userPet;
-		printf(" %s %s", gamePlay.getName().c_str(), userPet.GetRandomResponse().c_str());
+		printf("%s %s", menu.getName().c_str(), userPet.GetRandomResponse().c_str());
 	}
 	else {
 		Sphynx userPet;
-		printf(" %s %s", gamePlay.getName().c_str(), userPet.GetRandomResponse().c_str());
+		printf("%s %s", menu.getName().c_str(), userPet.GetRandomResponse().c_str());
 	}
 }

@@ -5,10 +5,11 @@ using namespace std;
 class GamePlay
 {
 private:
-	int iPetType = NULL;
-	int iCatType = NULL;
+	int iPetType=0;
+	int iCatType=0;
 	string sPetName;
 public:
+
 	string asPets[3] = {"Dog","Cat","Hamster"};
 	string getName();
 	void startup();

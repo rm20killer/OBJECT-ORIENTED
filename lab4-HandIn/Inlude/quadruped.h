@@ -12,6 +12,14 @@ protected:
 	static const int kiNoLegs = 4;
 	//creates an array which is connected to leg.h, each leg being a different value of leg
 	Leg legs[kiNoLegs];
+	
+	
+	/*
+	int iHealth = 20;
+	int iHunger = 20;
+	int ithirst = 0;
+	*/
+
 public:
 	string aslegType[kiNoLegs] = { "Front left", "Front right", "Back left", "Back right" };
 	void raiseLeg(int legIndex);
