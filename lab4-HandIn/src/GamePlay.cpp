@@ -61,7 +61,7 @@ void GamePlay::startup()
 		if (iPetType >= 49 && iPetType < 52) {
 			//check if value is between 1 and 3
 			bInMenu = false;
-			printf("Enter name of your %s\n", asPets[iPetType].c_str());
+			printf("Enter name of your pet\n");
 			cin >> sPetName;
 			if (iPetType == 49) //1 (dog)
 			{
