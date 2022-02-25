@@ -36,7 +36,7 @@ int main()
 	myRectangle.setOutlineThickness(1.0f);
 
 
-
+	
 	while (window.isOpen())
 	{
 		sf::Event event;
