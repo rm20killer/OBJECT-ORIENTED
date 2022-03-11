@@ -24,7 +24,7 @@ bool loadTextures(sf::Texture& tex, string sFileName)
 int main()
 {
 	// Create a window with the constructor
-	sf::RenderWindow window(sf::VideoMode(800, 600), "vertex and particles");
+	sf::RenderWindow window(sf::VideoMode(800, 600), "vertex test");
 
 	window.setPosition(sf::Vector2i(100, 100)); // Set the position of the window to 100,100
 	window.setFramerateLimit(60); // Set the limit of the the number of frames per second
@@ -43,7 +43,7 @@ int main()
 	cube[9].position = sf::Vector2f(200, 282);
 	cube[10].position = sf::Vector2f(200, 187);
 	sf::VertexArray triangle(sf::TriangleStrip, 1000);
-	for (int i = 0; i < 1000; i++)
+	for (int i = 0; i < 11; i++)
 	{
 		int iRed = (rand() % 255);
 		int iBlue = (rand() % 255);
@@ -51,7 +51,7 @@ int main()
 		float fX = (rand() % 800);
 		float fy = (rand() % 600);
 		triangle[i].position = sf::Vector2f(fX, fy);
-		triangle[i].color = sf::Color(iRed, iBlue, iGreen, 255);
+		cube[i].color = sf::Color(iRed, iBlue, iGreen, 255);
 	}
 	ParticleSystem particles(1000000);
 	bool bIsUpPressed = false;
