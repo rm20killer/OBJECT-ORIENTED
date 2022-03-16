@@ -5,8 +5,10 @@ class vetex
 {
 public:
 
-	void generateTringle();
+	void generateCube();
+	void DrawCube()
 private:
 	sf::Vertex vertex;
-	sf::VertexArray triangle(sf::Triangles, 3);
+	sf::LinesStrip line;
+	sf::VertexArray cube;
 };
