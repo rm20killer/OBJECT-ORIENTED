@@ -34,13 +34,13 @@ int main()
 	Stone.loadFloor();
 	ball.loadBall();
 	window.setFramerateLimit(0); // Set the limit of the the number of frames per second
-	Audio.LoadAudio();
+	//Audio.LoadAudio();
 	text.loadFonts();
 	text.LoadText();
 
 	bool bIsUpPressed = false;
 	bool bIsLeftPressed = false;
-
+	int iCurrentFrame = 0;
 	sf::Clock timer; // A timer object
 	int iCounter = 0; // An interger for counting
 
@@ -88,10 +88,17 @@ int main()
 					text.updateText(moved);
 				}
 				ball.drawBall(window);
-				Audio.UpdateAudio(float(moved));
-				Audio.playAudio();
+				//Audio.UpdateAudio(float(moved));
+				//Audio.playAudio();
 			}
 		}
+		sf::Time elapsedTime = timer.getElapsedTime();
+		if (elapsedTime.asSeconds() > 1.0 / 120)
+		{
+			ball.idleAnimation(iCurrentFrame);
+			timer.restart();
+		}
+		ball.drawBall(window);
 		window.clear(sf::Color(255, 255, 255));
 		Stone.drawFloor(window);
 		ball.drawBall(window);

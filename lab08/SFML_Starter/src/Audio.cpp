@@ -2,9 +2,10 @@
 
 bool audio::LoadAudio()
 {
-	if (!blopBuffer.loadFromFile(".\\assets\\audio\\beep.flac")) return 0;
-	blopSound.setBuffer(blopBuffer);
-	blopSound.setLoop(true);
+	return false;
+	//if (!blopBuffer.loadFromFile(".\\assets\\audio\\beep.flac")) return false;
+	//blopSound.setBuffer(blopBuffer);
+	//blopSound.setLoop(true);
 }
 
 void audio::playAudio()
