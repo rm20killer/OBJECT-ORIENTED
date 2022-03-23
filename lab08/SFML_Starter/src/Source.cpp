@@ -4,16 +4,17 @@
 #include "../include/ball.h"
 #include "../include/Audio.h"
 #include "../include/Text.h"
-
+//#include "../include/Vertex.h"
 using namespace std;
 
 stone Stone;
 Ball ball;
 audio Audio;
 Text text;
+//vetex Vertex;
 
 int moved = 0;
-
+int iCurrentFrame = 0;
 
 bool loadTextures(sf::Texture& tex, string sFileName)
 {
@@ -40,7 +41,6 @@ int main()
 
 	bool bIsUpPressed = false;
 	bool bIsLeftPressed = false;
-	int iCurrentFrame = 0;
 	sf::Clock timer; // A timer object
 	int iCounter = 0; // An interger for counting
 
@@ -87,21 +87,24 @@ int main()
 					ball.MoveBall(direction, 10);
 					text.updateText(moved);
 				}
-				ball.drawBall(window);
+				//ball.drawBall(window);
 				//Audio.UpdateAudio(float(moved));
 				//Audio.playAudio();
 			}
 		}
+
 		sf::Time elapsedTime = timer.getElapsedTime();
-		if (elapsedTime.asSeconds() > 1.0 / 120)
+		if (elapsedTime.asSeconds() > 1.0 / 150000)
 		{
-			ball.idleAnimation(iCurrentFrame);
+			iCurrentFrame = ball.idleAnimation(iCurrentFrame);
 			timer.restart();
 		}
 		ball.drawBall(window);
 		window.clear(sf::Color(255, 255, 255));
 		Stone.drawFloor(window);
 		ball.drawBall(window);
+		//Vertex.generateCube();
+		//Vertex.DrawCube(window);
 		text.DisplayText(window);
 		window.display();
 	}

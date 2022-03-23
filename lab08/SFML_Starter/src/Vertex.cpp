@@ -14,3 +14,8 @@ void vetex::generateCube()
 	cube[9].position = sf::Vector2f(200, 282);
 	cube[10].position = sf::Vector2f(200, 187);
 }
+
+void vetex::DrawCube(sf::RenderWindow& window)
+{
+	window.draw(cube);
+}

@@ -8,9 +8,9 @@ bool Ball::loadBall()
 	spBall.setPosition(100, 100);
 	spBall.setScale(0.25f, 0.25f);
 
-	sf::Vector2f IdleSize(286, 263);
+	sf::Vector2f IdleSize(280, 280);
 	const sf::Vector2i sheetDims(3, 3);
-	if (!IdleTex.loadFromFile(".\\assets\\textures\\bird.png")) return false;
+	if (!IdleTex.loadFromFile(".\\assets\\sprite\\bird3.png")) return false;
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)
@@ -23,8 +23,6 @@ bool Ball::loadBall()
 	IdleSprite.setTexture(IdleTex);
 	IdleSprite.setTextureRect(IdleRects[iNumFrames]);
 
-	
-	
 	return true;
 }
 
@@ -38,6 +36,7 @@ void Ball::MoveBall(char direction, float velocity)
 	if (direction == 'w') {
 		if (IdleSprite.getPosition().y > 0) {
 			IdleSprite.move(0, -velocity);
+			//printf("%s + %s", IdleSprite.getPosition().y, IdleSprite.getPosition().x);
 		}
 	}
 	if (direction == 's') {
@@ -60,12 +59,24 @@ void Ball::MoveBall(char direction, float velocity)
 
 int Ball::idleAnimation(int iCurrentFrame)
 {
+	int iRed = (rand() % 255);
+	int iBlue = (rand() % 255);
+	int iGreen = (rand() % 255);
+	int rotate = (rand() % 360);
+	int flip(rand() % 2);
+	if (flip = 1) {
+		IdleSprite.setScale(IdleSprite.getScale().x * -1, IdleSprite.getScale().y);
+	}
+	//sf::Color test(iRed, iBlue, iGreen , 0);
+	IdleSprite.setColor(sf::Color(iRed, iBlue, iGreen, 255));
+	IdleSprite.setRotation(rotate);
 	iCurrentFrame++;
-	if (iCurrentFrame > iNumFrames)
+	if (iCurrentFrame >= iNumFrames)
 	{
 		iCurrentFrame = 0;
 	}
 	IdleSprite.setTextureRect(IdleRects[iCurrentFrame]);
+	//std::cout << iCurrentFrame << std::endl;
 	return iCurrentFrame;
 }
 

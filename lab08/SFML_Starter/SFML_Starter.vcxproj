@@ -151,6 +151,7 @@
     <ClCompile Include="src\ball.cpp" />
     <ClCompile Include="src\Stone.cpp" />
     <ClCompile Include="src\Source.cpp" />
+    <ClCompile Include="src\Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll" />
