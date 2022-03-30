@@ -1,4 +1,4 @@
-#include "../../../include/GameEngine/objects/DisplayManager.h"
+#include "../../../include/GameEngine/objects/ObjectManager.h"
 #include "../../../include/GameEngine/objects/snake.h"
 #include "../../../include/GameEngine/objects/Background.h"
 #include "../../../include/GameEngine/objects/wall.h"

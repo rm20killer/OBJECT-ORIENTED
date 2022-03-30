@@ -1,5 +1,5 @@
 #include "../../../include/GameEngine/Input/InputManager.h"
-#include "../../../include/GameEngine/objects/DisplayManager.h"
+#include "../../../include/GameEngine/objects/ObjectManager.h"
 
 Object object;
 void InputManager::KeyPressed(sf::Event event)

@@ -168,7 +168,7 @@
     <ClCompile Include="src\GameEngine\Display\wall.cpp" />
     <ClCompile Include="src\GameEngine\Display\Background.cpp" />
     <ClCompile Include="src\GameEngine\Display\snake.cpp" />
-    <ClCompile Include="src\GameEngine\Display\DisplayManager.cpp" />
+    <ClCompile Include="src\GameEngine\Display\ObjectManager.cpp" />
     <ClCompile Include="src\GameEngine\Input\InputManager.cpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
@@ -176,7 +176,7 @@
     <ClInclude Include="include\GameEngine\Events\GameOver.h" />
     <ClInclude Include="include\GameEngine\Events\spawnapple.h" />
     <ClInclude Include="include\GameEngine\objects\Background.h" />
-    <ClInclude Include="include\GameEngine\objects\DisplayManager.h" />
+    <ClInclude Include="include\GameEngine\objects\ObjectManager.h" />
     <ClInclude Include="include\GameEngine\objects\food.h" />
     <ClInclude Include="include\GameEngine\objects\snake.h" />
     <ClInclude Include="include\GameEngine\objects\SnakeBody.h" />
