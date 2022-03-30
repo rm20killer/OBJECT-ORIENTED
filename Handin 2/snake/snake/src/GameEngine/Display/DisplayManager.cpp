@@ -2,10 +2,12 @@
 #include "../../../include/GameEngine/objects/snake.h"
 #include "../../../include/GameEngine/objects/Background.h"
 #include "../../../include/GameEngine/objects/wall.h"
+#include "..\..\..\include\GameEngine\objects\food.h"
 
 SnakeHead snakehead;
 Background background;
 Wall wall;
+food Food;
 
 /// <summary>
 /// loads all textures used in the game.
@@ -19,6 +21,7 @@ bool Object::loadImageAll()
 	if (snakehead.loadImage() == false) { return false; };
 	if (background.loadImage() == false) { return false; };
 	if (wall.loadImage() == false) { return false; };
+	if (Food.loadImage() == false) { return false; };
 	return true;
 }
 
@@ -28,6 +31,8 @@ void Object::drawImageAll(sf::RenderWindow& window)
 	background.draw(window);
 	wall.draw(window);
 	snakehead.draw(window);
+	Food.setPosition();
+	Food.draw(window);
 
 	//draw last (forground)
 }

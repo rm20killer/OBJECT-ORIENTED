@@ -65,11 +65,11 @@ int Ball::idleAnimation(int iCurrentFrame)
 	int rotate = (rand() % 360);
 	int flip(rand() % 2);
 	if (flip = 1) {
-		//IdleSprite.setScale(IdleSprite.getScale().x * -1, IdleSprite.getScale().y);
+		IdleSprite.setScale(IdleSprite.getScale().x * -1, IdleSprite.getScale().y);
 	}
 	//sf::Color test(iRed, iBlue, iGreen , 0);
 	IdleSprite.setColor(sf::Color(iRed, iBlue, iGreen, 255));
-	//IdleSprite.setRotation(rotate);
+	IdleSprite.setRotation(rotate);
 	iCurrentFrame++;
 	if (iCurrentFrame >= iNumFrames)
 	{

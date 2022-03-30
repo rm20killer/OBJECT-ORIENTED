@@ -37,7 +37,7 @@ void SnakeHead::draw(sf::RenderWindow& window)
 
 void SnakeHead::Move()
 {
-	for (int i = NumberOfBody; i < 0; i--)
+	for (int i = NumberOfBody; i >= 0; i=i-1)
 	{
 		if (i == 0)
 		{

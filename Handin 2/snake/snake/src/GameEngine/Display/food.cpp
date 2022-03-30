@@ -7,11 +7,15 @@ bool food::loadImage()
 	return true;
 }
 
-void food::setPosition(sf::Vector2f pos)
+/// <summary>
+/// generates a random position for the food
+/// </summary>
+/// <param name="pos"></param>
+void food::setPosition()
 {
-	//random number from 1 to 11 then multiple that by 50
-
-	//user random number 1 and random number 2 to set posistion of sprite
+	int x = rand() % 11 + 1;
+	int y = rand() % 11 + 1;
+	sprite.setPosition(x * 50, y * 50);
 }
 
 void food::draw(sf::RenderWindow& window)
@@ -23,3 +27,4 @@ sf::Vector2f food::ReturnPosition()
 {
 	return sf::Vector2f(sprite.getPosition());
 }
+

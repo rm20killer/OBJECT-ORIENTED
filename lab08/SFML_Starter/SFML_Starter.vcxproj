@@ -146,11 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\backuo.cpp" />
     <ClCompile Include="src\Text.cpp" />
     <ClCompile Include="src\Audio.cpp" />
     <ClCompile Include="src\ball.cpp" />
     <ClCompile Include="src\Stone.cpp" />
-    <ClCompile Include="src\Source.cpp" />
     <ClCompile Include="src\Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>

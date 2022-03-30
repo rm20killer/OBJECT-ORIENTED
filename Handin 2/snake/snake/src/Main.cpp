@@ -19,7 +19,7 @@ int main() {
 	objects.loadImageAll();
 	//render window
 	sf::RenderWindow window(sf::VideoMode(ScreenWidth, ScreenHeight), "Snake");
-	window.setFramerateLimit(1);
+	window.setFramerateLimit(4);
 	
 	//window open
 	while (window.isOpen()) {

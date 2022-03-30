@@ -21,13 +21,35 @@ bool loadTextures(sf::Texture& tex, string sFileName)
 int main()
 {
 	// Create a window with the constructor
-	sf::RenderWindow window(sf::VideoMode(800, 600), "My first SFML window");
+	sf::RenderWindow window(sf::VideoMode(800, 600), "vertex and particles");
 
 	window.setPosition(sf::Vector2i(100, 100)); // Set the position of the window to 100,100
-	Stone.loadFloor();
-	ball.loadBall();
 	window.setFramerateLimit(60); // Set the limit of the the number of frames per second
 
+	sf::Vertex vertex(sf::Vector2f(10.f, 50.f), sf::Color::Red, sf::Vector2f(100.f, 100.f));
+	sf::VertexArray cube(sf::LineStrip, 11);
+	cube[0].position = sf::Vector2f(300, 300);
+	cube[1].position = sf::Vector2f(300, 200);
+	cube[2].position = sf::Vector2f(200, 187);
+	cube[3].position = sf::Vector2f(300, 175);
+	cube[4].position = sf::Vector2f(400, 187);
+	cube[5].position = sf::Vector2f(300, 200);
+	cube[6].position = sf::Vector2f(400, 187);
+	cube[7].position = sf::Vector2f(400, 287);
+	cube[8].position = sf::Vector2f(300, 300);
+	cube[9].position = sf::Vector2f(200, 282);
+	cube[10].position = sf::Vector2f(200, 187);
+	sf::VertexArray triangle(sf::TriangleStrip, 1000);
+	for (int i = 0; i < 100; i++)
+	{
+		int iRed = (rand() % 255);
+		int iBlue = (rand() % 255);
+		int iGreen = (rand() % 255);
+		float fX = (rand() % 600);
+		float fy = (rand() % 600);
+		triangle[i].position = sf::Vector2f(fX, fy);
+		triangle[i].color = sf::Color(iRed, iBlue, iGreen, 255);
+	}
 	bool bIsUpPressed = false;
 	bool bIsLeftPressed = false;
 
@@ -46,35 +68,13 @@ int main()
 			{
 				window.close();
 			}
-			
-			if (event.type == sf::Event::KeyPressed)
-			{
-				if (event.key.code == sf::Keyboard::W) {
-					char direction = 'w';
-					ball.MoveBall(direction, 10);
-					//myRectangle2.move(0, -10);
-				}
-				if (event.key.code == sf::Keyboard::S) {
-					char direction = 's';
-					//myRectangle2.move(0, 10);
-					ball.MoveBall(direction, 10);
-				}
-				if (event.key.code == sf::Keyboard::A) {
-					char direction = 'a';
-					//myRectangle2.move(-10, 0);
-					ball.MoveBall(direction, 10);
-				}
-				if (event.key.code == sf::Keyboard::D) {
-					char direction = 'd';
-					//myRectangle2.move(10, 0);
-					ball.MoveBall(direction, 10);
-				}
-				ball.drawBall(window);
-			}
 		}
-		window.clear(sf::Color(255, 255, 255));
-		Stone.drawFloor(window);
-		ball.drawBall(window);
+		//sf::Vector2i mouse = sf::Mouse::getPosition(window);
+		//particles.setEmitter(sf::Vector2f(250f,250f));
+
+		window.clear();
+		window.draw(triangle);
+		//window.draw(particles);
 		window.display();
 	}
 }
