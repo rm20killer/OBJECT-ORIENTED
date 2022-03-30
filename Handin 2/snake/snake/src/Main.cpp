@@ -1,25 +1,25 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "../include/GameEngine/Input/InputManager.h"
-#include "../include/GameEngine/Display/DisplayManager.h"
-
+#include "../include/GameEngine/objects/DisplayManager.h"
+#include "../include/GameEngine/objects/snake.h"
 using namespace std;
 
 //#varibles#//
 
 //window varibles
 int ScreenWidth = 800;
-int ScreenHeight = 600;
+int ScreenHeight = 650;
 
 InputManager inputManager;
 Object objects;
-
+SnakeHead snakeHead;
 int main() {
 	//load in images and sou
 	objects.loadImageAll();
 	//render window
 	sf::RenderWindow window(sf::VideoMode(ScreenWidth, ScreenHeight), "Snake");
-	window.setFramerateLimit(60);
+	window.setFramerateLimit(1);
 	
 	//window open
 	while (window.isOpen()) {
@@ -35,7 +35,9 @@ int main() {
 				inputManager.KeyPressed(event);
 			}
 		}
-		//drawing
+		//drawing~
+		objects.snakeMove();
+		window.clear(sf::Color(255, 255, 255));
 		objects.drawImageAll(window);
 		window.display();
 	}

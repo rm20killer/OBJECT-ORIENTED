@@ -1,4 +1,4 @@
-#include "../../../include/GameEngine/Display/Background.h"
+#include "../../../include/GameEngine/objects/Background.h"
 
 
 
@@ -12,14 +12,14 @@
 bool Background::loadImage()
 {
 	//load and set texture
-	if (!texture.loadFromFile("..\.\\..\\assets\\texures\\stone.png")) return false;
+	if (!texture.loadFromFile("..\..\\..\\assets\\texures\\grid50.png")) return false;
 	texture.setRepeated(true);
 	sprite.setTexture(texture);
 	//set scale
 	sprite.setTextureRect(sf::IntRect(0,0, 600, 600));
 	sprite.setPosition(0, 0);
 	return true;
-	
+	//11x11
 }
 
 void Background::draw(sf::RenderWindow& window)

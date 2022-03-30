@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -163,6 +163,9 @@
     <None Include="sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GameEngine\Display\food.cpp" />
+    <ClCompile Include="src\GameEngine\Display\SnakeBody.cpp" />
+    <ClCompile Include="src\GameEngine\Display\wall.cpp" />
     <ClCompile Include="src\GameEngine\Display\Background.cpp" />
     <ClCompile Include="src\GameEngine\Display\snake.cpp" />
     <ClCompile Include="src\GameEngine\Display\DisplayManager.cpp" />
@@ -170,9 +173,14 @@
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\GameEngine\Display\Background.h" />
-    <ClInclude Include="include\GameEngine\Display\DisplayManager.h" />
-    <ClInclude Include="include\GameEngine\Display\snake.h" />
+    <ClInclude Include="include\GameEngine\Events\GameOver.h" />
+    <ClInclude Include="include\GameEngine\Events\spawnapple.h" />
+    <ClInclude Include="include\GameEngine\objects\Background.h" />
+    <ClInclude Include="include\GameEngine\objects\DisplayManager.h" />
+    <ClInclude Include="include\GameEngine\objects\food.h" />
+    <ClInclude Include="include\GameEngine\objects\snake.h" />
+    <ClInclude Include="include\GameEngine\objects\SnakeBody.h" />
+    <ClInclude Include="include\GameEngine\objects\wall.h" />
     <ClInclude Include="include\GameEngine\Input\InputManager.h" />
   </ItemGroup>
   <ItemGroup>
