@@ -163,6 +163,8 @@
     <None Include="sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GameEngine\UI\UiManager.cpp" />
+    <ClCompile Include="src\GameEngine\UI\StartScreen.cpp" />
     <ClCompile Include="src\GameEngine\Display\food.cpp" />
     <ClCompile Include="src\GameEngine\Display\SnakeBody.cpp" />
     <ClCompile Include="src\GameEngine\Display\wall.cpp" />
@@ -182,6 +184,8 @@
     <ClInclude Include="include\GameEngine\objects\SnakeBody.h" />
     <ClInclude Include="include\GameEngine\objects\wall.h" />
     <ClInclude Include="include\GameEngine\Input\InputManager.h" />
+    <ClInclude Include="include\GameEngine\UI\StartScreen.h" />
+    <ClInclude Include="include\GameEngine\UI\UiManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\texures\background.png" />

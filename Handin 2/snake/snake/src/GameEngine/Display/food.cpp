@@ -16,6 +16,8 @@ void food::setPosition()
 	int x = rand() % 11 + 1;
 	int y = rand() % 11 + 1;
 	sprite.setPosition(x * 50, y * 50);
+	//printf x and y
+	printf("x: %i, y: %i\n", x, y);
 }
 
 void food::draw(sf::RenderWindow& window)

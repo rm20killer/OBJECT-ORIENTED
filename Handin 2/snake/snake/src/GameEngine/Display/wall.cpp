@@ -31,3 +31,4 @@ void Wall::draw(sf::RenderWindow& window)
 	window.draw(topWall);
 	window.draw(bottomWall);
 }
+

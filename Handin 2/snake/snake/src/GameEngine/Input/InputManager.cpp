@@ -26,4 +26,5 @@ void InputManager::KeyPressed(sf::Event event)
 		object.snakeChangeDir(3);
 	}
 	
+	
 }

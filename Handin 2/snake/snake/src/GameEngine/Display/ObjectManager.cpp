@@ -7,7 +7,7 @@
 SnakeHead snakehead;
 Background background;
 Wall wall;
-food Food;
+//food Food;
 
 /// <summary>
 /// loads all textures used in the game.
@@ -21,7 +21,8 @@ bool Object::loadImageAll()
 	if (snakehead.loadImage() == false) { return false; };
 	if (background.loadImage() == false) { return false; };
 	if (wall.loadImage() == false) { return false; };
-	if (Food.loadImage() == false) { return false; };
+	//if (Food.loadImage() == false) { return false; };
+	//Food.setPosition();
 	return true;
 }
 
@@ -31,8 +32,8 @@ void Object::drawImageAll(sf::RenderWindow& window)
 	background.draw(window);
 	wall.draw(window);
 	snakehead.draw(window);
-	Food.setPosition();
-	Food.draw(window);
+	//Food.setPosition();
+	//Food.draw(window);
 
 	//draw last (forground)
 }
@@ -45,4 +46,22 @@ void Object::snakeMove()
 void Object::snakeChangeDir(int Direction)
 {
 	snakehead.Turn(Direction);
+}
+
+int Object::HasWon()
+{
+	int isWon = snakehead.IsWon();
+	if (isWon == 1)
+	{
+		printf("GAME WON\n");
+	}
+	else if (isWon == -1)
+	{
+		printf("GAME LOST\n");
+	}
+	else
+	{
+		
+	}
+	return isWon;
 }
