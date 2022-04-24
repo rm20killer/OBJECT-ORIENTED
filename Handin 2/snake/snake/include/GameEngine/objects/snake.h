@@ -10,6 +10,7 @@ public:
 	void Turn(int dir);
 	sf::Vector2f ReturnPosition();
 	int IsWon();
+	int ReturnFoodEaten();
 private:
 	sf::Sprite sprite;
 	sf::Texture texture;
@@ -18,6 +19,10 @@ private:
 	int WinAmount = 5;
 	bool bIsLost = false;
 	int iHitBypass = 0;
+	static const int iNumFrames = 4;
+	sf::IntRect Rects[iNumFrames];
+	int foodEaten = 0;
+	int FoodToWin = 5;
 protected:
 	static const int MaxNumberOfBody = 10;
 	int NumberOfBody =3;

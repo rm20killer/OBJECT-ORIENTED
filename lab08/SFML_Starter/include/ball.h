@@ -15,6 +15,6 @@ private:
 
 	sf::Texture IdleTex;
 	sf::Sprite IdleSprite;
-	static const int iNumFrames = 9;
+	static const int iNumFrames = 4;
 	sf::IntRect IdleRects[iNumFrames];
 };

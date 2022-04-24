@@ -1,15 +1,16 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-class UIStartScreen
+class UIInGame
 {
 public:
 	bool loadImage();
 	void draw(sf::RenderWindow& window);
-	void setDiff(int diff);
+	void setText(int diff);
+	std::string returnTime();
 private:
-	sf::Sprite sprite;
-	sf::Texture texture;
+	sf::Sprite appleSprite;
+	sf::Texture appleTexure;
 	sf::Font font;
 	sf::Text text;
-	sf::Text text2;
+	sf::Text timerText;
 };

@@ -15,4 +15,5 @@ public:
 	void snakeMove();
 	void snakeChangeDir(int Direction);
 	int HasWon();
+	int ReturnFoodEaten();
 };

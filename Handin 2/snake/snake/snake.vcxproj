@@ -163,6 +163,16 @@
     <None Include="sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GameEngine\Audio\click.cpp" />
+    <ClCompile Include="src\GameEngine\Audio\Death.cpp" />
+    <ClCompile Include="src\GameEngine\Audio\Hit.cpp" />
+    <ClCompile Include="src\GameEngine\Audio\AudioManger.cpp" />
+    <ClCompile Include="src\GameEngine\Audio\Pickup.cpp" />
+    <ClCompile Include="src\GameEngine\Audio\Win.cpp" />
+    <ClCompile Include="src\GameEngine\Other\Timer.cpp" />
+    <ClCompile Include="src\GameEngine\UI\GameLost.cpp" />
+    <ClCompile Include="src\GameEngine\UI\GameWon.cpp" />
+    <ClCompile Include="src\GameEngine\UI\Ingame.cpp" />
     <ClCompile Include="src\GameEngine\UI\UiManager.cpp" />
     <ClCompile Include="src\GameEngine\UI\StartScreen.cpp" />
     <ClCompile Include="src\GameEngine\Display\food.cpp" />
@@ -175,6 +185,12 @@
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\GameEngine\Audio\Death.h" />
+    <ClInclude Include="include\GameEngine\Audio\Win.h" />
+    <ClInclude Include="include\GameEngine\Audio\AudioManger.h" />
+    <ClInclude Include="include\GameEngine\Audio\click.h" />
+    <ClInclude Include="include\GameEngine\Audio\Hit.h" />
+    <ClInclude Include="include\GameEngine\Audio\Pickup.h" />
     <ClInclude Include="include\GameEngine\Events\GameOver.h" />
     <ClInclude Include="include\GameEngine\Events\spawnapple.h" />
     <ClInclude Include="include\GameEngine\objects\Background.h" />
@@ -184,11 +200,12 @@
     <ClInclude Include="include\GameEngine\objects\SnakeBody.h" />
     <ClInclude Include="include\GameEngine\objects\wall.h" />
     <ClInclude Include="include\GameEngine\Input\InputManager.h" />
+    <ClInclude Include="include\GameEngine\Other\Timer.h" />
+    <ClInclude Include="include\GameEngine\UI\GameLost.h" />
+    <ClInclude Include="include\GameEngine\UI\GameWon.h" />
+    <ClInclude Include="include\GameEngine\UI\Ingame.h" />
     <ClInclude Include="include\GameEngine\UI\StartScreen.h" />
     <ClInclude Include="include\GameEngine\UI\UiManager.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="assets\texures\background.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
