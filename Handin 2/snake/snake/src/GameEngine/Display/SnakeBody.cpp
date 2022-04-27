@@ -41,3 +41,25 @@ void SnakeBody::setRotation(int i)
 	sprite.setTextureRect(Rects[i]);
 }
 
+/// <summary>
+/// Replace the texture to a tail
+/// </summary>
+/// <returns></returns>
+bool SnakeBody::setTail()
+{
+	sf::Vector2f IdleSize(50, 50);
+	const sf::Vector2i sheetDims(4, 1);
+	if (!texture.loadFromFile("..\.\\..\\assets\\texures\\snakeTrail_spritesheet.png")) return false;
+	sprite.setTexture(texture);
+	for (int i = 0; i < sheetDims.x; i++)
+	{
+		for (int j = 0; j < sheetDims.y; j++)
+		{
+			Rects[i + j * 3] = sf::IntRect(i * IdleSize.x, j * IdleSize.y, IdleSize.x, IdleSize.y);
+		}
+	}
+	sprite.setScale(IdleSize.x / texture.getSize().x * sheetDims.x, IdleSize.y / texture.getSize().y * sheetDims.y);
+	sprite.setTexture(texture);
+	sprite.setTextureRect(Rects[iNumFrames]);
+	return true;
+}

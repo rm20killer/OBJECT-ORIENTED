@@ -9,6 +9,7 @@ public:
 	void draw(sf::RenderWindow& window);
 	sf::Vector2f ReturnPosition();
 	void setRotation(int i);
+	bool setTail();
 private:
 	sf::Sprite sprite;
 	sf::Texture texture;

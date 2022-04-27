@@ -48,6 +48,16 @@ bool SnakeHead::loadImage()
 	sprite.setPosition(300, 300);
 	for (int i = 0; i < MaxNumberOfBody; i++)
 	{
+		/*
+		if (i == MaxNumberOfBody-1)
+		{
+			snakebody[i].setTail();
+		}
+		else
+		{
+			snakebody[i].loadImage();
+		}
+		*/
 		snakebody[i].loadImage();
 	}
 	while (bFoodSet==false)
@@ -92,7 +102,36 @@ void SnakeHead::Move()
 		else {
 			snakebody[i].setPosition(snakebody[i - 1].ReturnPosition());
 		}
-		snakebody[i].setRotation(Direction);
+		//snakebody[i].setRotation(Direction);
+		sf::Vector2f Snakepos = snakebody[i].ReturnPosition();
+		sf::Vector2f Snake2pos = snakebody[i+1].ReturnPosition();
+		cout << "Snake pos: " << Snakepos.x << " " << Snakepos.y << endl;
+		cout << "Snake2 pos: " << Snake2pos.x << " " << Snake2pos.y << endl;
+		float snakeDirectionX = Snakepos.x - Snake2pos.x;
+		float snakeDirectionY = Snakepos.y - Snake2pos.y;
+		cout<< snakeDirectionX << " " << snakeDirectionY << endl;
+		if(snakeDirectionX == -50)
+		{
+			snakebody[i].setRotation(1);
+		}
+		else if (snakeDirectionX == 50)
+		{
+			snakebody[i].setRotation(3);
+		}
+		else if (snakeDirectionY == -50)
+		{
+			snakebody[i].setRotation(0);
+		}
+		else if (snakeDirectionY == 50)
+		{
+			snakebody[i].setRotation(2);
+		}
+		else
+		{
+			snakebody[i].setRotation(Direction);
+		}
+		
+		//snakebody[i].setRotation(Direction);
 	}
 	//0 up, 1 left, 2 down 3 right
 	if (Direction == 0)
