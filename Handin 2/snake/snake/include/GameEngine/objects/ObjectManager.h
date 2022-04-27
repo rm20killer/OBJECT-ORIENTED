@@ -16,4 +16,5 @@ public:
 	void snakeChangeDir(int Direction);
 	int HasWon();
 	int ReturnFoodEaten();
+	sf::String ReturnTimer();
 };

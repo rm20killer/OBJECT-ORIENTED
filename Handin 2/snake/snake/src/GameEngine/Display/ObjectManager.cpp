@@ -87,3 +87,8 @@ int Object::ReturnFoodEaten()
 {
 	return snakehead.ReturnFoodEaten();
 }
+
+sf::String Object::ReturnTimer()
+{
+	return UI.returnTime();
+}

@@ -52,3 +52,20 @@ void Menu::setText(int iMenuType, int iInput)
 		gameLost.setText(iInput);
 	}
 }
+void Menu::setText(int iMenuType, std::string sInput)
+{
+	//0=start
+	//1=game won
+	//2=game lost
+	if (iMenuType == 0)
+	{
+	}
+	else if (iMenuType == 1)
+	{
+		gameWon.SetText(sInput);
+	}
+	else if (iMenuType == 2)
+	{
+	}
+}
+
