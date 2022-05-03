@@ -1,4 +1,4 @@
-#include "..\..\..\include\GameEngine\objects\food.h"
+#include "../../../include/GameEngine/objects/food.h"
 #include "../../../include/GameEngine/objects/snake.h"
 #include "../../../include/GameEngine/objects/SnakeBody.h"
 bool food::loadImage()

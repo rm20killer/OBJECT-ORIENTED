@@ -1,4 +1,4 @@
-#include "..\..\..\include\GameEngine\objects\SnakeBody.h"
+#include "../../../include/GameEngine/objects/SnakeBody.h"
 
 bool SnakeBody::loadImage()
 {
@@ -21,14 +21,14 @@ bool SnakeBody::loadImage()
 	return true;
 }
 
-void SnakeBody::setPosition(sf::Vector2f pos)
-{
-	sprite.setPosition(pos);
-}
-
 void SnakeBody::draw(sf::RenderWindow& window)
 {
 	window.draw(sprite);
+}
+
+void SnakeBody::setPosition(sf::Vector2f pos)
+{
+	sprite.setPosition(pos);
 }
 
 sf::Vector2f SnakeBody::ReturnPosition()

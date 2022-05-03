@@ -1,8 +1,8 @@
 #include "../../../include/GameEngine/objects/snake.h"
 #include "../../../include/GameEngine/Events/GameOver.h"
 #include "../../../include/GameEngine/objects/SnakeBody.h"
-#include "..\..\..\include\GameEngine\objects\food.h"
-#include "..\..\..\include\GameEngine\Audio\AudioManger.h"
+#include "../../../include/GameEngine/objects/food.h"
+#include "../../../include/GameEngine/Audio/AudioManger.h"
 using namespace std;
 
 
@@ -48,16 +48,6 @@ bool SnakeHead::loadImage()
 	sprite.setPosition(300, 300);
 	for (int i = 0; i < MaxNumberOfBody; i++)
 	{
-		/*
-		if (i == MaxNumberOfBody-1)
-		{
-			snakebody[i].setTail();
-		}
-		else
-		{
-			snakebody[i].loadImage();
-		}
-		*/
 		snakebody[i].loadImage();
 	}
 	while (bFoodSet==false)

@@ -1,4 +1,4 @@
-
+ 
 #include "..\..\..\include\GameEngine\UI\GameLost.h"
 
 bool UIGameLost::loadImage()

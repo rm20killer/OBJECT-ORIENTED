@@ -2,7 +2,7 @@
 #include "../../../include/GameEngine/objects/snake.h"
 #include "../../../include/GameEngine/objects/Background.h"
 #include "../../../include/GameEngine/objects/wall.h"
-#include "..\..\..\include\GameEngine\UI\InGame.h"
+#include "../../../include/GameEngine/UI/InGame.h"
 SnakeHead snakehead;
 Background background;
 Wall wall;

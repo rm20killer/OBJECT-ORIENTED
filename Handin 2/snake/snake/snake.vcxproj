@@ -163,6 +163,7 @@
     <None Include="sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GameEngine\MainEngine.cpp" />
     <ClCompile Include="src\GameEngine\Audio\click.cpp" />
     <ClCompile Include="src\GameEngine\Audio\Death.cpp" />
     <ClCompile Include="src\GameEngine\Audio\Hit.cpp" />
@@ -193,6 +194,7 @@
     <ClInclude Include="include\GameEngine\Audio\Pickup.h" />
     <ClInclude Include="include\GameEngine\Events\GameOver.h" />
     <ClInclude Include="include\GameEngine\Events\spawnapple.h" />
+    <ClInclude Include="include\GameEngine\MainEngine.h" />
     <ClInclude Include="include\GameEngine\objects\Background.h" />
     <ClInclude Include="include\GameEngine\objects\ObjectManager.h" />
     <ClInclude Include="include\GameEngine\objects\food.h" />
