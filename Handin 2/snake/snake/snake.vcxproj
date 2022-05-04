@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="openal32.dll" />
     <None Include="sfml-audio-2.dll" />
     <None Include="sfml-audio-d-2.dll" />
     <None Include="sfml-graphics-2.dll" />
@@ -176,12 +177,12 @@
     <ClCompile Include="src\GameEngine\UI\Ingame.cpp" />
     <ClCompile Include="src\GameEngine\UI\UiManager.cpp" />
     <ClCompile Include="src\GameEngine\UI\StartScreen.cpp" />
-    <ClCompile Include="src\GameEngine\Display\food.cpp" />
-    <ClCompile Include="src\GameEngine\Display\SnakeBody.cpp" />
-    <ClCompile Include="src\GameEngine\Display\wall.cpp" />
-    <ClCompile Include="src\GameEngine\Display\Background.cpp" />
-    <ClCompile Include="src\GameEngine\Display\snake.cpp" />
-    <ClCompile Include="src\GameEngine\Display\ObjectManager.cpp" />
+    <ClCompile Include="src\GameEngine\Objects\food.cpp" />
+    <ClCompile Include="src\GameEngine\Objects\SnakeBody.cpp" />
+    <ClCompile Include="src\GameEngine\Objects\wall.cpp" />
+    <ClCompile Include="src\GameEngine\Objects\Background.cpp" />
+    <ClCompile Include="src\GameEngine\Objects\snake.cpp" />
+    <ClCompile Include="src\GameEngine\Objects\ObjectManager.cpp" />
     <ClCompile Include="src\GameEngine\Input\InputManager.cpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>

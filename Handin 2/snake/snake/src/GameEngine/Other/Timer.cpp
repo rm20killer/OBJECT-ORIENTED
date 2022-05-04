@@ -1,6 +1,8 @@
 #include "..\..\..\include\GameEngine\Other\Timer.h"
 #include <string>
 
+
+//https://en.cppreference.com/w/cpp/chrono/c/time
 void Timer::reset()
 {
 	unixtime= std::time(nullptr);

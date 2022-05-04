@@ -20,11 +20,12 @@
     <None Include="sfml-graphics-2.dll" />
     <None Include="sfml-graphics-d-2.dll" />
     <None Include="sfml-network-2.dll" />
-    <None Include="sfml-network-d-2.dll" />
     <None Include="sfml-system-2.dll" />
     <None Include="sfml-system-d-2.dll" />
     <None Include="sfml-window-2.dll" />
     <None Include="sfml-window-d-2.dll" />
+    <None Include="openal32.dll" />
+    <None Include="sfml-network-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
@@ -33,22 +34,22 @@
     <ClCompile Include="src\GameEngine\Input\InputManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Display\ObjectManager.cpp">
+    <ClCompile Include="src\GameEngine\Objects\ObjectManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Display\snake.cpp">
+    <ClCompile Include="src\GameEngine\Objects\snake.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Display\Background.cpp">
+    <ClCompile Include="src\GameEngine\Objects\Background.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Display\wall.cpp">
+    <ClCompile Include="src\GameEngine\Objects\wall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Display\SnakeBody.cpp">
+    <ClCompile Include="src\GameEngine\Objects\SnakeBody.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Display\food.cpp">
+    <ClCompile Include="src\GameEngine\Objects\food.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\GameEngine\UI\StartScreen.cpp">
